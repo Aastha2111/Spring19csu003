@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here -->
+    
+    <!-- define the dependency -->
+  
+   <!--  OBJECT CREATION OF BASKET BALL CLASS-->
+   
+   	<bean id="stud"
+ 		class="com.ncu.Student_Desk.Student">
+ 		<constructor-arg name="name" type="String" value="aastha"/>
+   	<constructor-arg name="id" type="int" value="101"/>
+   	<property name="crs" ref="course"></property>
+   	</bean>
+   	
+ 
+     	
+  	<bean id="course"
+ 		class="com.ncu.Student_Desk.Course">	
+ 		<property name="name" value="English"/>
+  	<property name="duration" value="4"/>
+  	
+  	<property name="discount" value="10"/>
+ 		
+  	</bean>
+  	
+  		
+   
+   
+ 	 </beans>
+ 	

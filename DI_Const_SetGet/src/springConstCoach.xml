@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here -->
+    
+    <!-- define the dependency -->
+  
+   <!--  OBJECT CREATION OF BASKET BALL CLASS-->
+   
+   	<bean id="BBCoach"
+ 		class="com.ncu.ConstCoach.BaseBall">
+  	<constructor-arg name="ifortune" ref="fortune"/>
+   	<constructor-arg name="name" value="aastha"/>
+   	<constructor-arg  name="email" value="xyz@mial.com"/>
+   	<constructor-arg  name="age" value="20"/>
+   	<constructor-arg   name="add" ref="address"/>
+   	</bean>
+   	
+ 
+     	
+  	<bean id="fortune"
+ 		class="com.ncu.ConstCoach.Fortune">	
+ 		
+  	</bean>
+  	
+  	
+  	<bean id="address" class="com.ncu.ConstCoach.Address">
+  	<property name="city" value="Delhi"/>
+  	<property name="house_no" value="84"/>
+  	<property name="state" value="new delhi"/>
+  	<property name="pincode" value="110028"/>
+  	
+ 
+  	
+  	</bean>
+  	
+   
+   
+ 	 </beans>
