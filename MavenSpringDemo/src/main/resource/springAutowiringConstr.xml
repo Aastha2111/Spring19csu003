@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here -->
+    
+    <!-- define the dependency -->
+  <!-- singleton prototype -->
+ 	<bean id="empl" class="com.ncu.mvn.autowiring.Constructor.Employee" autowire="constructor">
+ 		<constructor-arg name="empName" value="aastha"/>
+    </bean>
+     
+    <bean id="department"  
+ 		class="com.ncu.mvn.autowiring.Constructor.Department">	
+ 	<property name="Dept_name" value="cse"/>
+  	<property name="Dept_no" value="461"/>
+ 	 		
+ 	</bean>
+ 	 <bean id="address" 
+ 		class="com.ncu.mvn.autowiring.Constructor.Address">	
+ 		<property name="city" value="Gurgaon"/>
+  	<property name="house_no" value="461/7"/>
+  	<property name="state" value="Gurgaon"/>
+  	<property name="pincode" value="121102"/>
+  	 </bean> 
+ 	
+ 	 </beans>
+ 	

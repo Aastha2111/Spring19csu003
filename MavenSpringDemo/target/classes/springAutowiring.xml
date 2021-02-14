@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here -->
+    
+    <!-- define the dependency -->
+  <!-- singleton prototype -->
+ 	<bean id="empl" class="com.ncu.mvn.autowiring.Employee" autowire="byType">
+ 		<!--  class="com.ncu.mvn.autowiring.Employee" autowire="byName">	-->
+ 			
+ 	
+    </bean>
+     
+    <bean id="depart"  
+ 		class="com.ncu.mvn.autowiring.Department">	
+ 	<property name="Dept_name" value="cse"/>
+  	<property name="Dept_no" value="461"/>
+ 	 		
+ 	</bean>
+ 	<!--  <bean id="addr" 
+ 		class="com.ncu.mvn.autowiring.Address">	
+ 		<property name="city" value="Gurgaon"/>
+  	<property name="house_no" value="461/7"/>
+  	<property name="state" value="Gurgaon"/>
+  	<property name="pincode" value="121102"/>
+  	 </bean>  -->
+ 	
+ 	<bean id="address1" 
+ 		class="com.ncu.mvn.autowiring.Address">	
+ 		<property name="city" value="Gurgaon"/>
+  	<property name="house_no" value="461/7"/>
+  	<property name="state" value="Gurgaon"/>
+  	<property name="pincode" value="121102"/>
+  	 </bean> 
+ 	 </beans>
+ 	

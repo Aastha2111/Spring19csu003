@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here -->
+    <!-- byTYpe autowiring in byName autowiring -->
+ 	<bean id="AA" class="com.ncu.autowiring.LabQues.A" autowire="byType">
+ 	 	    </bean>
+     
+    <bean id="BB"  
+ 		class="com.ncu.autowiring.LabQues.B" autowire="byName">	
+ 	<property name="Bname" value="bhavya"/>
+  	<!-- though b and b1 are given String(Bname,Bname) argument here yet it(byType) is able to
+  	distinguish on bases of class c injection  -->
+ 	 		
+ 	</bean>
+ 	 <bean id="BB1" 
+ 		class="com.ncu.autowiring.LabQues.B1">	 		
+  <!-- <property name="Bage" value="20"/> -->
+  <property name="Bname" value="bhavya-xyz"/>
+    	 </bean> 
+ 	
+ 	<bean id="c" 
+ 		class="com.ncu.autowiring.LabQues.C">	
+ 		<property name="Cname" value="Gurgaon"/>
+  	
+  	 </bean> 
+ 	 </beans>
+ 	
