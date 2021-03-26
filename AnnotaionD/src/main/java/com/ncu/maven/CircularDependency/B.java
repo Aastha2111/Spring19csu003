@@ -4,26 +4,33 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+//19csu003-aastha
+
 @Component
-@Scope("singleton")
 public class B {
-@Autowired
-private C c;
-public C getC() {
-	return c;
-}
+	 A a;
+	 
+//	    @Autowired
+//	    public B(@Lazy A a) {
+//	        super();
+//	        this.a = a;
+//	        System.out.println("Constructor B");
+//	    }
+	 
+	    public A getA() {
+	        return a;
+	    }
+	    @Autowired
+	    public void setA(A a) {
+	        this.a = a;
+	        System.out.println("Setter B");
+	    }
 
-public void setC(C c) {
-	this.c = c;
-}
-
-	
-B() {
-	System.out.println("Constructor B");
-}
+	 
 @PostConstruct
 public void doStartup()     //no agrument method-no return type (VOID) 
 {

@@ -1,5 +1,8 @@
 package com.ncu.javaConfigEmpl;
 
+import org.springframework.stereotype.Component;
+
+//@Component
 public class Address {
 	private String city;
 	private String house_no;

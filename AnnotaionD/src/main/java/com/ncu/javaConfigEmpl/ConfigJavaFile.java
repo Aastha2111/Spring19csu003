@@ -10,19 +10,24 @@ import org.springframework.context.annotation.ComponentScans;
 @ComponentScan("com.ncu.javaConfigEmpl")  //to enable Annotation in ur project
 public class ConfigJavaFile {
 
-	@Bean public Address Adr() 
-	{
-		return new Address("delhi","c12");
-	}
-	@Bean
-	public IEmployee Empl()	//diectly class to access those function not in interface
-	{
-		return new Employee(Adr());   
-	}
+//	@Bean public Address Adr() 
+//	{
+//		return new Address("delhi","c12");
+//	}
+//	@Bean
+//	public IEmployee Empl()	//diectly class to access those function not in interface
+//	{
+//		return new Employee(Adr());   
+//	}
+//	@Bean 
+//	public Employee Empl1()
+//	{
+//		return new Employee(null);
+//	}
 	@Bean 
-	public Employee Empl1()
+	public IEmplClass emp()
 	{
-		return new Employee(null);
+		return new IEmplClass();
 	}
 	
 }

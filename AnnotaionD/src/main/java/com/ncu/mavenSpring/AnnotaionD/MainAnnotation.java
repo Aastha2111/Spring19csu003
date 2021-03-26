@@ -11,7 +11,7 @@ public class MainAnnotation {
 			
 			ApplicationContext ct = 
 					new ClassPathXmlApplicationContext("springAnnotationD.xml");
-//			ICoach BCoach=(ICoach)ct.getBean("BBCoach",ICoach.class);
+			ICoach BCoach=(ICoach)ct.getBean("BBCoach",ICoach.class);
 //			????what if interface hota  --->toh what we shall write 
 //			.class OR .interface
 			
