@@ -1,0 +1,11 @@
+27 Mar 2021 08:56:45 Going to start String com.ncu.loggingAop.Employee.toString()
+27 Mar 2021 08:56:45startTime: 1616815605532
+27 Mar 2021 08:56:45 Going to endtime String com.ncu.loggingAop.Employee.toString()
+27 Mar 2021 08:57:26 Going to start String com.ncu.loggingAop.Employee.toString()
+27 Mar 2021 08:57:26startTime: 1616815646914
+27 Mar 2021 08:57:26 Going to endtime String com.ncu.loggingAop.Employee.toString()
+27 Mar 2021 09:25:45 Going to start String com.ncu.loggingAop.Employee.toString()
+27 Mar 2021 09:25:45startTime: 1616817345916
+27 Mar 2021 09:25:45 Going to endtime String com.ncu.loggingAop.Employee.toString()
+27 Mar 2021 09:41:33After Throwing Exception Employee com.ncu.Assgn2.q1.EmployeeService.getEmployeewithId(Long)
+27 Mar 2021 09:45:22After Throwing Exception Employee com.ncu.Assgn2.q1.EmployeeService.getEmployeewithId(Long)
