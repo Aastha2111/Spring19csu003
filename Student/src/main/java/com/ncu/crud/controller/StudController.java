@@ -57,7 +57,7 @@ public class StudController {
 	    }    
 	    /* It updates model object. */    
 	    @RequestMapping(value="/editsave",method = RequestMethod.POST)    
-	    public String editsave(@ModelAttribute("emp") Student stud){    
+	    public String editsave(@ModelAttribute("stud") Student stud){    
 	        dao.update(stud);    
 	        return "redirect:/viewStud";    
 	    }    

@@ -17,7 +17,7 @@ public class StudDao {
 	    this.template = template;    
 	}    
 	public int save(Student p){    
-	    String sql="insert into student(name,marks,department) values('"+p.getName()+"',"+p.getDept_name()+",'"+p.getMarks()+"')";    
+	    String sql="insert into student(id,name,marks,dept_name) values('"+p.getId()+"','"+p.getName()+"',"+p.getMarks()+",'"+p.getDept_name()+"')";    
 	    return template.update(sql);    
 	}    
 	public int update(Student p){    
