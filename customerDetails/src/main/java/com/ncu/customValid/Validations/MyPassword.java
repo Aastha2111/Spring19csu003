@@ -1,25 +1,25 @@
 package com.ncu.customValid.Validations;
 
+import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
 
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.ElementType;
-
-@Constraint(validatedBy = codeCustConstrainValidator.class)
+@Constraint(validatedBy = PassCustConstrainValidation.class)
 @Target({ElementType.METHOD,ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MyCourseCode {
+public @interface MyPassword {
+
 
 	// define default course code
 //	public String value() default "CSE";
-	public String[] value() default {"CSE","ECE","CSL","SOM"};
+	public String value() default "";
 		
 		// define default error message
-		public String message() default "must start with CSE,ECE,CSL,SOM";
+		public String message() default "must special charater,numerical,first letter capital ";
 		
 		// define default groups
 		public Class<?>[] groups() default {};

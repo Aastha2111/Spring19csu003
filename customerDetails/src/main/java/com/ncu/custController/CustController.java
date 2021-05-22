@@ -8,8 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,31 +20,36 @@ import com.ncu.custModel.Users;
 
 
 @Controller
+//@RequestMapping("/myCust")
 public class CustController {
 
 
-//	@RequestMapping("/")
-//	public String welcomemsg(Model model) {
-////		model.addAttribute("msg", "hello world");
-//		return "index";
-//	}
-	
-
-//	@InitBinder
-//	public void initBinder(WebDataBinder dataBinder) {
-//		
-//		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
-//		
-//		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
-//	}
-	
-	@RequestMapping("/")
-	public String helloMsg()
-	{
-		return "welcome";
+//space trim..... if no field is inputted then it will help to  
+	@InitBinder
+	public void initBinder(WebDataBinder dataBinder) {
+		
+		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
+		
+		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
 	}
 	
-	
+//	@RequestMapping("/")
+//
+//	public String helloMsg()
+//	{
+//		return "welcome";
+//	}
+//	
+//	@RequestMapping("/init")
+//	@RequestMapping("/")
+	@GetMapping(value="/init")
+	public String initView(Model model) {
+	System.out.println("Handler method is called.");
+	model.addAttribute("welcome_msg", "Spring Mvc Internationalization CUSTOMER PORTAL");
+	return "index";
+	}
+
+
 
 //	
 	@RequestMapping("/reg")

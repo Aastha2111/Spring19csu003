@@ -19,7 +19,9 @@ pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <body>
 
 
-<img src="resources/image/welcome.PNG"/>	
+<img src="resources/image/welcome.PNG"/>
+	<!-- <img src="C:\Users\HP\eclipse-workspace\customerDetails\src\main\webapp\resources\image\welcome.PNG"/>  -->
+
 <br>
 <!-- <h1>Welcome Page </h1> -->
 <h1> Welcome to the customer Registeration Portal </h1>
@@ -32,6 +34,7 @@ pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <form:form action="login" method="post" modelAttribute="UserModel">
 
 First Name :  <form:input path="userid"/>
+<form:errors path="userid" cssClass="error" />
 <br>
 <br>
 LastName(*) :  <form:input path="lname"/>
@@ -43,6 +46,7 @@ Email Id(*)  :  <form:input path="email"/>
 <br>
 <br>
 Password  :  <form:input path="pwd" type="password"/>
+<form:errors path="pwd" cssClass="error" />
 <br>
 <br>
 Contact no(*):  <form:input path="phno" />
